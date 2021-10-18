@@ -3,7 +3,7 @@ root = Tk()
 lbl = Label(
     root,
     text="You chose NS-3!",
-    fg="green",
+    fg="yellow",
     bg='#299617',
     font="Consolas 15 bold"
     )
