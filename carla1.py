@@ -3,6 +3,7 @@
 # should replace it with actual CARLA Python API scripts.
 
 from tkinter import *
+global window
 window = Tk()
 lbl = Label(
     window,
