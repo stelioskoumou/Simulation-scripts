@@ -3,13 +3,13 @@
 # should replace it with actual CARLA Python API scripts.
 
 from tkinter import *
-root = Tk()
+window = Tk()
 lbl = Label(
-    root,
+    window,
     text="You chose to simulate with CARLA, under Configuration 1!",
     fg="blue",
     bg='#299617',
     font="Consolas 15 bold"
     )
 lbl.pack()
-root.mainloop()
+window.mainloop()
