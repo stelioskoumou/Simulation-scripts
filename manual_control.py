@@ -69,7 +69,7 @@ except IndexError:
 
 import carla
 
-from carla import ColorConverter as cc
+#from carla import ColorConverter as cc
 
 import argparse
 import collections
@@ -665,15 +665,15 @@ class CameraManager(object):
             carla.Transform(carla.Location(x=-5.5, z=2.8), carla.Rotation(pitch=-15)),
             carla.Transform(carla.Location(x=1.6, z=1.7))]
         self.transform_index = 1
-        self.sensors = [
-            ['sensor.camera.rgb', cc.Raw, 'Camera RGB'],
-            ['sensor.camera.depth', cc.Raw, 'Camera Depth (Raw)'],
-            ['sensor.camera.depth', cc.Depth, 'Camera Depth (Gray Scale)'],
-            ['sensor.camera.depth', cc.LogarithmicDepth, 'Camera Depth (Logarithmic Gray Scale)'],
-            ['sensor.camera.semantic_segmentation', cc.Raw, 'Camera Semantic Segmentation (Raw)'],
-            ['sensor.camera.semantic_segmentation', cc.CityScapesPalette,
-                'Camera Semantic Segmentation (CityScapes Palette)'],
-            ['sensor.lidar.ray_cast', None, 'Lidar (Ray-Cast)']]
+#         self.sensors = [
+#             ['sensor.camera.rgb', cc.Raw, 'Camera RGB'],
+#             ['sensor.camera.depth', cc.Raw, 'Camera Depth (Raw)'],
+#             ['sensor.camera.depth', cc.Depth, 'Camera Depth (Gray Scale)'],
+#             ['sensor.camera.depth', cc.LogarithmicDepth, 'Camera Depth (Logarithmic Gray Scale)'],
+#             ['sensor.camera.semantic_segmentation', cc.Raw, 'Camera Semantic Segmentation (Raw)'],
+#             ['sensor.camera.semantic_segmentation', cc.CityScapesPalette,
+#                 'Camera Semantic Segmentation (CityScapes Palette)'],
+#             ['sensor.lidar.ray_cast', None, 'Lidar (Ray-Cast)']]
         world = self._parent.get_world()
         bp_library = world.get_blueprint_library()
         for item in self.sensors:
